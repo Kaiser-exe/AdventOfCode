@@ -13,8 +13,6 @@ fetch('./Day4_1/input.txt')
     const regExp = /(XMAS)/g
     let helper = ''
 
-    console.log(arr[0].split('').reverse().join(''))
-
     // row
     for (let i = 0; i < rowCount; i++) {
       result += [...arr[i].matchAll(regExp)].length
@@ -30,8 +28,6 @@ fetch('./Day4_1/input.txt')
       result += [...helper?.split('').reverse().join('').matchAll(regExp)].length
       helper = ''
     }
-
-    console.log(result)
 
     // diagonal
     for (let i = 0; i < rowCount-3; i++) {
